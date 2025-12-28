@@ -1,0 +1,14 @@
+numpy
+scipy
+pandas
+scikit-learn
+matplotlib
+seaborn
+tqdm
+pyyaml
+torch
+torchvision
+monai
+nibabel
+lifelines
+torchmetrics
