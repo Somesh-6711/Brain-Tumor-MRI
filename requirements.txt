@@ -6,9 +6,11 @@ matplotlib
 seaborn
 tqdm
 pyyaml
+
 torch
 torchvision
 monai
 nibabel
+
 lifelines
 torchmetrics
