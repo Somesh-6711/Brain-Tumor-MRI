@@ -1,6 +1,10 @@
----
 
-## 🧠 Project Overview
+
+# Brain Tumor MRI: Multimodal Segmentation + Outcome Prediction
+
+## 1. Introduction
+...
+
 
 This repository implements a complete **end-to-end medical imaging pipeline** for brain tumor analysis using the BraTS2020 MRI dataset.  
 The project integrates multiple core skills expected in biomedical AI roles:
@@ -13,7 +17,6 @@ The project integrates multiple core skills expected in biomedical AI roles:
 
 This mirrors the real workflows used in clinical AI labs (e.g., UTSW, MD Anderson).
 
----
 
 ## 🎯 Problem Statement
 
@@ -28,7 +31,6 @@ This project builds a system that:
 
 > **Segments brain tumors from MRI and predicts whether a patient is high-risk (<1-year survival).**
 
----
 
 ## 🧩 Dataset
 
@@ -46,7 +48,7 @@ Clinical metadata includes:
 - Survival days  
 - Extent of Resection (GTR, STR, NA)
 
----
+
 
 ## 🧱 Pipeline Summary
 
@@ -56,7 +58,7 @@ Clinical metadata includes:
 - Automatic train/validation CSV split generation
 - Visual inspection utilities for quality control
 
----
+
 
 ### **2️⃣ 3D Tumor Segmentation**
 Model:  
@@ -73,7 +75,6 @@ Outputs:
 - `.nii.gz` predicted segmentation  
 - Side-by-side PNG visualization  
 
----
 
 ### **3️⃣ Radiomics Feature Extraction**
 
@@ -90,7 +91,7 @@ Stored in:
 
 These features form the basis of the outcome model.
 
----
+
 
 ### **4️⃣ Outcome Prediction Model**
 
@@ -99,7 +100,6 @@ Merged radiomics + clinical metadata:
 
 Target:  
 **High-Risk (1-year survival)**  
-```text
 1 if Survival_days < 365
 0 otherwise
 ⚠️ Survival_days was NOT used as a model feature (to avoid label leakage).
